@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+      <!-- product template inherit -->
+      <record model="ir.ui.view" id="product_product_extend">
+        <field name="name">product.product.inherit</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view" />
+        <field name="arch" type="xml">
+          <field name="standard_price" position="after">
+            <group name="group_standard_price">
+              <field name="value_inr" />
+            </group>
+          </field>
+        </field>
+      </record>
+    </data>
+  </odoo>
